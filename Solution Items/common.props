@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <RestoreSources>https://nuget.fiscaalgemak.nl/nuget/;https://api.nuget.org/v3/index.json</RestoreSources>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <!-- AssemblyInfo Parameters-->
     <Product>JsksSwo</Product>
     <Company>jsks-swo</Company>
@@ -23,11 +19,4 @@
     <!-- AssemblyFileVersionAttribute = %build.number% -->
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
-
-  <Target Name="CopyPackage" AfterTargets="Pack">
-    <Copy
-      SourceFiles="$(OutputPath)\$(PackageId).$(PackageVersion).symbols.nupkg"
-      DestinationFolder="$(MSBuildThisFileDirectory)\..\PackagesOut"
-      />
-  </Target>
 </Project>
